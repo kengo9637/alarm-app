@@ -1,0 +1,56 @@
+.main
+  .alarm-list
+    - @alarms.each do |alarm|
+      .alarm-list__box
+        .alarm-list__box__name
+          = alarm.name
+        .alarm-list__box__main
+          .alarm-list__box__time
+            .alarm-list__box__time__hour
+              -if alarm.hour.time.to_s.length == 2
+                .alarm-list__box__time__hour__text<>
+                  = alarm.hour.time
+              - else
+                .alarm-list__box__time__hour__text<>
+                  0
+                  = alarm.hour.time
+            = ":"
+            .alarm-list__box__time__minute
+              -if alarm.minute.time.to_s.length == 2
+                .alarm-list__box__time__minute__text
+                  = alarm.minute.time
+              - else
+                .alarm-list__box__time__minute__text<>
+                  0
+                  = alarm.minute.time
+          .alarm-list__box__edit
+            = link_to edit_alarm_path(alarm.id), class: "alarm-list__box__edit__link" do
+              .alarm-list__box__edit__box
+                Edit
+          .alarm-list__box__delete
+            = link_to alarm_path(alarm.id), method: :delete, class: "alarm-list__box__delete__link" do
+              .alarm-list__box__delete__box
+                Delete
+  .youtube__list
+    -if @alarms[0].present?
+      .youtube__list--a
+        %input{name: "video1", type:"hidden", value: @alarms[0].music.last(11), id:"video1"}
+        #player1
+    -if @alarms[1].present?
+      .youtube__list--b
+        %input{name: "video2", type:"hidden", value: @alarms[1].music.last(11), id:"video2"}
+        #player2
+    -if @alarms[2].present?
+      .youtube__list--c
+        %input{name: "video3", type:"hidden", value: @alarms[2].music.last(11), id:"video3"}
+        #player3
+    -if @alarms[3].present?
+      .youtube__list--d
+        %input{name: "video4", type:"hidden", value: @alarms[3].music.last(11), id:"video4"}
+        #player4
+    -if @alarms[4].present?
+      .youtube__list--e
+        %input{name: "video5", type:"hidden", value: @alarms[4].music.last(11), id:"video5"}
+        #player5
+
+

@@ -1,0 +1,15 @@
+.main__alarm
+  = form_for @alarms, html: {id: 'new__content'} do |f|
+    = render 'layouts/error_messages', model: f.object
+    = f.label :"Alarm Name", {class: "main__alarm__name__label"}
+    = f.text_field :name, class: "main__alarm__name", placeholder: "type an alarm name"
+    = f.label :"Alarm Time", {class: "main__alarm__time__label"}
+    .main__alarm__time
+      = f.collection_select :hour_id, @hours, :id, :time, {prompt: true}, {class: "main__alarm__time__hour"}
+      = f.label :":"
+      = f.collection_select :minute_id, @minutes, :id, :time, {prompt: true}, {class: "main__alarm__time__hour"}
+    = f.label :"Alarm music", {class: "main__alarm__music__label"}
+    = f.label :"＊youtubeの動画をアラーム音に設定できます", {class: "main__alarm__music__comment"}
+    = f.text_field :music, class: "main__alarm__music", placeholder: "type url"
+    .main__alarm__submit
+      = f.submit "Create", class: "main__alarm__submit__btn"

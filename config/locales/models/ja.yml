@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      alarm: アラーム
+    attributes:
+      alarm:
+        name: アラーム名
+        hour_id: 時間
+        minute_id: 分
+        music: youtube動画のURL

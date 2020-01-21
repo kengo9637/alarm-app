@@ -1,0 +1,25 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title AlarmApp
+    = csrf_meta_tags
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body.body
+    .header
+      = link_to root_path, data: {"turbolinks"=>false}, class: "header__btn" do
+        .header__name
+          Online Alarm
+      .setting
+      = link_to new_alarm_path, class: "setting__btn__link" do
+        .setting__btn
+          = icon("far", "clock")
+          Set alarm
+      #clock.clock
+        #clock__date.clock__date
+        #clock__time.clock__time
+      
+    = yield

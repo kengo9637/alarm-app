@@ -1,0 +1,228 @@
+.body {
+  background-color:#F5F5F5;
+  color: white;
+  font-family: 'Noto Serif JP', sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+.header{
+  height: 100px;
+  width: 100vw;
+  background-color: #4169E1;
+  z-index: 1;
+  display: flex;
+}
+
+.header__name {
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+  padding-left: 50px;
+}
+.header__btn {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.clock {
+  padding-left: 250px;
+  &__date {
+    font-size: 20px;
+    text-align: center;
+  }
+  &__time {
+    font-size: 50px;
+    text-align: center;
+  }
+}
+
+.setting {
+  padding-left: 100px;
+  &__btn {
+    font-size: 40px;
+    line-height: 100px;
+    &__link {
+      text-decoration: inherit;
+      color: white;
+    }
+  }
+}
+
+
+.main__alarm {
+  width: 500px;
+  margin: 0 auto;
+  color: black;
+  margin-top: 70px;
+  &__name {
+    display: block;
+    height: 40px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    &__label {
+      margin-top: 20px;
+      display: block;
+    }
+  }
+  &__time {
+    margin-left: 20px;
+    height: 40px;
+    width: calc(100% - 40px);
+    text-align: center;
+    &__label {
+      margin-top: 20px;
+      display: block;
+    }
+    &__hour {
+      height: 60px;
+      width: calc(50% - 50px);
+      cursor: pointer;
+    }
+  }
+  &__music {
+    display: block;
+    height: 40px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    &__comment {
+      display: block;
+    }
+    &__label {
+      display: block;
+      margin-top: 40px;
+    }
+  }
+  &__submit {
+    margin-top: 20px;
+    text-align: center;
+    &__btn {
+      height: 40px;
+      width: 80px;
+      cursor: pointer;
+      border: none;
+      font-size: 16px;
+      border: solid 1px #A9A9A9;
+    }
+  }
+}
+
+.alarm-list {
+  padding-top: 20px;
+  width: 500px;
+  &__box {
+    height: 100px;
+    color: black;
+    margin-bottom: 15px;
+    background-color: #D3D3D3;
+    border: solid 2px #A9A9A9;
+    &__main{
+      display: flex;
+      justify-content: space-between;
+    }
+    &__name {
+      font-size: 25px;
+      color:black;
+      padding-left: 50px;
+    }
+    &__time {
+      font-size: 40px;
+      height: 50px;
+      line-height: 50px;
+      color: black;
+      display: flex;
+      padding-left: 70px;
+    }
+    &__edit {
+      margin-top: 15px;
+      margin-left: 50px;
+      width: 120px;
+      height: 50px;
+      &__box {
+        width: 100px;
+        text-align: center;
+        height: 35px;
+        background-color: blue;
+        line-height: 35px;
+        font-size: 17px;
+        text-decoration: none;
+        color: #FFF;
+        background: #03A9F4;
+        border: solid 1px #0f9ada;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+      }
+      &__link {
+        text-decoration: none;
+      }
+      &__music {
+        margin-left: 20px;
+      }
+    }
+    &__delete {
+      width: 120px;
+      height: 50px;
+      margin-top: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+      &__box {
+        width: 100px;
+        text-align: center;
+        height: 35px;
+        background-color:red;
+        line-height: 35px;
+        font-size: 17px;
+        text-decoration: none;
+        color: #FFF;
+        background: red;
+        border: solid 1px red;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+        text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+      }
+      &__link {
+        text-decoration: none;
+      }
+    }
+    
+  }
+}
+  
+iframe {
+  height: 100px;
+  width: 200px;
+  margin-left: 20px;
+}
+
+
+.youtube__list{
+  padding-top: 22px;
+  
+  &--a{
+    height: 104px;
+    margin-bottom: 15px;
+  }
+  &--b{
+    height: 104px;
+    margin-bottom: 15px;
+  }
+  &--c{
+    height: 104px;
+    margin-bottom: 15px;
+  }
+  &--d{
+    height: 104px;
+    margin-bottom: 15px;
+  }
+  &--e{
+    height: 104px;
+    margin-bottom: 15px;
+  }
+}
